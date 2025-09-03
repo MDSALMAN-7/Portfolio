@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/*styles(input).css */
+
+@theme {
+  --color-primary: #0ea5a4;
+  --color-accent: #06b6d4;
+  --keyframe-float-0: translateY(0px);
+  --keyframe-float-50: translateY(-8px);
+  --keyframe-float-100: translateY(0px);
+  --animation-float: float 4s ease-in-out infinite;
+}
+
+/* If you want the animation, you can still define it manually: */
+@layer utilities {
+  @keyframes float {
+    0% { transform: var(--keyframe-float-0); }
+    50% { transform: var(--keyframe-float-50); }
+    100% { transform: var(--keyframe-float-100); }
+  }
+  .animate-float {
+    animation: var(--animation-float);
+  }
+}
+
+
+
+

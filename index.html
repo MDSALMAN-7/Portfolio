@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MD Salman — MERN Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of MD Salman — MERN stack developer. Modern responsive portfolio built with TailwindCSS, HTML & JavaScript."
+    />
+    
+    <!-- Tailwind integration -->
+<link rel="stylesheet" href="./dist/styles.css">
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial;
+      }
+      .focus-ring:focus {
+        outline: 3px solid rgba(14, 165, 164, 0.25);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-slate-200 antialiased leading-relaxed ">
+    <!-- NAVBAR -->
+    <header class="fixed w-full z-40 bg-gray-950 backdrop-blur transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-18 p-4">
+          <a href="#home" class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-slate-900 font-bold">
+              MS
+            </div>
+            <span class="hidden sm:inline-block font-semibold">Salman.</span>
+          </a>
+
+          <nav class="hidden md:flex items-center font-semibold gap-6">
+            <a href="#home" class="nav-link  text-slate-200 hover:text-white">Home</a>
+            <a href="#about" class="nav-link text-slate-200 hover:text-white">About</a>
+              <!-- <a href="#experience" class="nav-link text-slate-200 hover:text-white">Experience</a> -->
+            <a href="#projects" class="nav-link text-slate-200 hover:text-white">Projects</a>
+            <a href="#skills" class="nav-link text-slate-200 hover:text-white">Skills</a>
+            <a href="#contact" class="nav-link text-slate-200 hover:text-white">Contact</a>
+            <a href="/image/my-resume.pdf"  class="ml-3 inline-flex items-center px-4 py-2 bg-primary text-slate-900 rounded-md font-medium hover:brightness-105">Resume</a>
+          </nav>
+
+          <!-- Mobile -->
+          <div class="md:hidden">
+            <button id="menuBtn" aria-label="Open menu" class="p-2 rounded-md bg-slate-800 focus-ring">
+              <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobilePanel" class="md:hidden bg-slate-900/95 backdrop-blur-sm hidden">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+          <a href="#home" class="block py-2 px-2 rounded hover:bg-slate-800">Home</a>
+          <a href="#about" class="block py-2 px-2 rounded hover:bg-slate-800">About</a>
+           <!-- <a href="#experience" class="block py-2 px-2 rounded hover:bg-slate-800">Experience</a> -->
+          <a href="#projects" class="block py-2 px-2 rounded hover:bg-slate-800">Projects</a>
+          <a href="#skills" class="block py-2 px-2 rounded hover:bg-slate-800">Skills</a>
+          <a href="#contact" class="block py-2 px-2 rounded hover:bg-slate-800">Contact</a>
+          
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="pt-10">
+    <!-- Hero -->
+    <section id="home" class="relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 reveal">
+        <p class="mb-3 inline-flex items-center gap-2 bg-transparent rounded-full border border-cyan-500/30  dark:bg-cyan-950/30 px-3 py-1 text-xs text-cyan-700 dark:text-cyan-300">
+          <span class="h-2 w-2 rounded-full bg-cyan-500 animate-pulse"></span>
+          Open to Frontend / Full‑Stack roles
+        </p>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+          Hi, I'm <span class="bg-gradient-to-r from-cyan-500 to-indigo-500 bg-clip-text text-transparent">MD Salman</span>
+        </h1>
+        <p class="mt-4 text-lg   ">Computer application postgraduate with a strong foundation in the MERN stack and hands‑on experience shipping real‑world projects.</p>
+        <p class="mt-2 text-lg"><span class="text-slate-500">I build</span> <span id="typing" class="font-semibold"></span></p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="./image/my-resume.pdf" download class="inline-flex hover:bg-gray-800 items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 text-sm font-semibold shadow hover:shadow-lg transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l4-5h-3V4h-2v7H8l4 5z"/><path d="M4 18h16v2H4z"/></svg>
+            Download Resume
+          </a>
+          <a href="#projects" class="hover:bg-gray-800 inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-sm font-semibold hover:shadow-glow transition">View Projects</a>
+          <div class="flex items-center gap-2 ml-2">
+            <a href="https://github.com/babloo-tech"  class=" hover:bg-gray-800 p-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:shadow-glow" aria-label="GitHub" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.3 1.8 1.3 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6.1 0-1.3.5-2.4 1.2-3.3 0-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.7 11.7 0 0 1 6 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.1 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.7-2.8 5.8-5.5 6.1.4.3.7 1 .7 2v3c0 .3.3.7.8.6A11.7 11.7 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/babloo-dev" class="p-2 hover:bg-gray-800 rounded-xl border border-slate-300 dark:border-slate-700 hover:shadow-glow" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-.9 1.8-1.8 3.7-1.8 3.9 0 4.6 2.4 4.6 5.5V21h-4v-4.9c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V21H9z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 reveal">
+        <div class="relative mx-auto max-w-md">
+          <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-indigo-400 opacity-20 blur-2xl"></div>
+          <div class="relative rounded-3xl  border-1 border-gray-700  p-6 backdrop-blur">
+            <div class="flex items-center gap-4">
+              <div class="h-14 w-14 shrink-0 rounded-2xl bg-gradient-to-br from-cyan-500 to-indigo-500 text-white grid place-items-center text-xl font-bold animate-float">BC</div>
+              <div>
+                <p class="text-sm text-slate-400">MERN Stack Developer</p>
+                <p class="font-semibold">Hyderabad, India • +91 82717 18040</p>
+                <a href="mailto:babloo.career@gmail.com" class="text-cyan-600 hover:underline">salmanmgr811201@gmail.com</a>
+              </div>
+            </div>
+            <hr class="my-4 border-slate-200/60 " />
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span> React, Tailwind CSS, Bootstrap</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span> Node.js, Express, MongoDB</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span> JWT Auth, Payments, CRUD Dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      <!-- ABOUT -->
+      <section id="about" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-1 text-center lg:text-left">
+              <h2 class="text-2xl font-bold">About Me</h2>
+              <p class="text-slate-400 mt-2">MCA graduate & full-stack developer passionate about building scalable apps and intuitive user interfaces. Experienced with React, Node, Express, and MongoDB.</p>
+
+              <div class="mt-4 space-y-2 text-sm text-slate-300">
+                <div><strong>Location:</strong> Hyderabad, India</div>
+                <div><strong>Email:</strong> <a href="mailto:babloo.career@gmail.com" class="text-primary">salmanmgr811201@gmail.com</a></div>
+                <div><strong>Phone:</strong> <a href="tel:+918271718040" class="text-primary">+91 88042 23911</a></div>
+              </div>
+
+              <div class="mt-6 flex gap-3 justify-center lg:justify-start">
+                <a href="#projects" class="px-4 py-2 rounded-md border border-slate-700">See my work</a>
+                <a href="#contact" class="px-4 py-2 rounded-md bg-primary text-slate-900">Contact me</a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-4">
+              <div class="bg-slate-800 rounded-2xl p-6 shadow-inner border border-slate-700">
+                <h3 class="text-lg font-semibold">Experience</h3>
+                <p class="text-slate-400 mt-2">Frontend Developer at Satya Satellite IT Solution (Apr 2024). Built responsive UIs with React + Tailwind, reusable components, dynamic filters, and mobile-first design with Lighthouse optimization.</p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                  <h4 class="font-semibold">Education</h4>
+                  <p class="text-slate-400 mt-2">MCA (8 CGPA) — VGU, Jaipur (2024)</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                  <h4 class="font-semibold">Tools</h4>
+                  <p class="text-slate-400 mt-2">VSCode • Git • Postman</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- EXPERIENCE -->
+      <!-- <section id="experience" class="py-16 bg-slate-900/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold">Experience</h2>
+          <div
+            class="mt-6 bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-2"
+          >
+            <h3 class="font-semibold">
+              Frontend Developer — Satya Statellite IT Solution
+            </h3>
+            <p class="text-sm text-slate-400">April 2024</p>
+            <ul class="list-disc pl-6 text-slate-300 mt-2 space-y-1">
+              <li>
+                Developed a responsive UI for the Home Lead project using
+                React.js with Tailwind, improving page load speed.
+              </li>
+              <li>
+                Built 10+ reusable components, optimizing development efficiency
+                and reducing redundant code.
+              </li>
+              <li>
+                Implemented dynamic search filters and property listings,
+                boosting user retention.
+              </li>
+              <li>
+                Ensured mobile responsiveness, achieving high Lighthouse scores.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- PROJECTS -->
+      <section id="projects" class="py-16 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold">Selected Projects</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <article class="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl overflow-hidden shadow-lg border border-slate-700">
+              <img class="w-full h-44 object-cover" src="image/courses.jpg" alt="CourseHub" />
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">CourseHub</h3>
+                <p class="text-slate-400 mt-2 text-sm">MERN stack platform with JWT auth, payments, and admin dashboard for course browsing, purchasing, and management.</p>
+                <div class="mt-4 flex gap-2">
+                  <a href="https://course-selling-app-jade.vercel.app" target="_blank" class="px-3 py-2 text-sm bg-primary text-slate-900 rounded-md">Live</a>
+                  <a href="https://github.com/babloo-tech" target="_blank" class="px-3 py-2 text-sm border border-slate-700 rounded-md">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl overflow-hidden shadow-lg border border-slate-700">
+              <img class="w-full h-44 object-cover" src="/image/library.jpg" alt="Video Library" />
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Video Library</h3>
+                <p class="text-slate-400 mt-2 text-sm">MERN + TypeScript app to manage and stream video content. Features watch later, CRUD admin dashboard, and responsive UI.</p>
+                <div class="mt-4 flex gap-2">
+                  <a href="https://online-courseapp.vercel.app/" target="_blank" class="px-3 py-2 text-sm bg-primary text-slate-900 rounded-md">Live</a>
+                  <a href="https://github.com/babloo-tech" target="_blank" class="px-3 py-2 text-sm border border-slate-700 rounded-md">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold">Skills</h2>
+          <p class="text-slate-400 mt-2">Technologies I use to build apps and interfaces.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-medium">JavaScript</span>
+                <span class="text-sm text-slate-400">90%</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
+                <div class="h-3 rounded-full bg-gradient-to-r from-primary to-accent" style="width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-medium">React.js</span>
+                <span class="text-sm text-slate-400">85%</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
+                <div class="h-3 rounded-full bg-gradient-to-r from-primary to-accent" style="width: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-medium">Node.js / Express</span>
+                <span class="text-sm text-slate-400">80%</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
+                <div class="h-3 rounded-full bg-gradient-to-r from-primary to-accent" style="width: 80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-medium">MongoDB</span>
+                <span class="text-sm text-slate-400">80%</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
+                <div class="h-3 rounded-full bg-gradient-to-r from-primary to-accent" style="width: 80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-medium">Tailwind / Bootstrap</span>
+                <span class="text-sm text-slate-400">90%</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-3 overflow-hidden">
+                <div class="h-3 rounded-full bg-gradient-to-r from-primary to-accent" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- CONTACT -->
+      <section id="contact" class="py-16 bg-slate-900/40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-center">Get in touch</h2>
+          <p class="text-slate-400 text-center mt-2">
+            Available for freelance projects and full-time opportunities.
+          </p>
+
+          <div
+            class="mt-8 bg-slate-800/60 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-6 border border-slate-700"
+          >
+            <div class="space-y-4">
+              <h3 class="font-semibold">Contact Info</h3>
+              <p class="text-slate-400">
+                Email:
+                <a href="mailto:salmanmgr811201@gmail.com" class="text-primary"
+                  >salmanmgr811201@gmail.com</a
+                >
+              </p>
+              <p class="text-slate-400">
+                Phone:
+                <a href="tel:8271718040" class="text-primary">8271718040</a>
+              </p>
+
+              <div class="mt-4 flex gap-3">
+                <a
+                  href="https://github.com/babloo-tech"
+                  target="_blank"
+                  class="px-3 py-2 bg-slate-700 rounded-md"
+                  >GitHub</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/babloo-dev?utm_source=share&utm_campaign=share_via& pu"
+                  target="_blank"
+                  class="px-3 py-2 bg-slate-700 rounded-md"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+
+
+<!-- contact -->
+<form id="contact-form" class="space-y-4">
+  <!-- Required keys -->
+  <input type="hidden" name="access_key" value="e61716d0-7c2d-4373-8d0a-54aed0c4667b" />
+  <input type="hidden" name="subject" value="New message from my site" />
+  <input type="hidden" name="from_name" value="My Portfolio Website" />
+
+   <!-- Spam protection -->
+  <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
+
+  <div>
+    <label for="name" class="sr-only">Name</label>
+    <input
+      id="name"
+      name="name"
+      required
+      autocomplete="name"
+      
+      class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 focus:ring-2 focus:ring-primary text-slate-100"
+      placeholder="Your name"
+    />
+  </div>
+
+  <div>
+    <label for="email" class="sr-only">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      required
+      autocomplete="email"
+      class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 focus:ring-2 focus:ring-primary text-slate-100"
+      placeholder="you@example.com"
+    />
+  </div>
+
+  <div>
+    <label for="message" class="sr-only">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      autocomplete="off" 
+      
+      class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 focus:ring-2 focus:ring-primary text-slate-100"
+      placeholder="Write a message"
+    ></textarea>
+  </div>
+
+  <div class="text-right">
+    <button
+      type="submit"
+      class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-accent text-slate-900 rounded-lg"
+    >
+      Send message
+     </button>
+     <div id="result" class="text-green-500 mt-2" aria-live="polite"></div>
+    </div>
+  </form>
+
+   </div>
+  </div>
+</section>
+
+      <!-- FOOTER -->
+      <footer class="py-8">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400"
+        >
+          <div>&copy; 2025 Babloo Chaurasiya • Built with ❤️ • Available for hire</div>
+        </div>
+      </footer>
+
+    </main>
+
+
+  <script src="script.js"></script>
+
+  </body>
+</html>
