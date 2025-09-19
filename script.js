@@ -1,4 +1,5 @@
 
+
       // Mobile menu toggle
       const menuBtn = document.getElementById('menuBtn')
       const mobilePanel = document.getElementById('mobilePanel')
@@ -102,9 +103,35 @@ form.addEventListener('submit', async (e) => {
     });
     const data = await res.json();
     result.textContent = data.message || (res.ok ? 'Sent!' : 'Error');
+
+    // ✅ Toast message
+    Toastify({
+      text: data.message || (res.ok ? "Sent!" : "Error"),
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      backgroundColor: res.ok ? "green" : "red"
+    }).showToast();
+
     if (res.ok) form.reset();
+
+    // Remove message after 3 seconds
+    setTimeout(() => {
+      result.textContent = '';
+    }, 3000);
   } catch (err) {
     result.textContent = 'Something went wrong!';
+
+    Toastify({
+      text: "Something went wrong!",
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "red"
+    }).showToast();
+
+    setTimeout(() => result.textContent = '', 3000);
+
     console.error(err);
   }
 });
