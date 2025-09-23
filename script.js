@@ -136,4 +136,35 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
-  
+
+// for image slide
+ const images = [
+  "image/CourseAcademy1.png",
+  "image/CourseAcademy2.png",
+  "image/CourseAcademy3.png",
+  "image/CourseAcademy4.png",
+  "image/CourseAcademy5.png",
+  "image/CourseAcademy6.png",
+  "image/CourseAcademy7.png"
+];
+
+let index = 0;
+const slider = document.getElementById("sliderImage");
+
+function slideImages() {
+  // Fade out
+  slider.classList.add("opacity-0");
+
+  setTimeout(() => {
+    // Change image after fade out
+    index++;
+    if (index >= images.length) index = 0;
+    slider.src = images[index];
+
+    // Fade in
+    slider.classList.remove("opacity-0");
+  }, 2000); // 500ms fade out duration
+}
+
+// Slide every 2 seconds
+setInterval(slideImages, 2000);
