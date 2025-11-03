@@ -32,6 +32,10 @@
         outline: 3px solid rgba(14, 165, 164, 0.25);
         outline-offset: 2px;
       }
+      .img {
+        height: 62vh;
+        width: auto;
+      }
     </style>
   </head>
   <body class="bg-slate-900 text-slate-200 antialiased leading-relaxed">
@@ -55,7 +59,7 @@
             <a href="#about" class="nav-link text-slate-200 hover:text-white"
               >About</a
             >
-            
+
             <a href="#projects" class="nav-link text-slate-200 hover:text-white"
               >Projects</a
             >
@@ -110,7 +114,7 @@
           <a href="#about" class="block py-2 px-2 rounded hover:bg-slate-800"
             >About</a
           >
-          
+
           <a href="#projects" class="block py-2 px-2 rounded hover:bg-slate-800"
             >Projects</a
           >
@@ -125,7 +129,6 @@
     </header>
 
     <main id="home" class="pt-10">
-      <!-- Hero -->
       <section id="home" class="relative">
         <div
           class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid lg:grid-cols-12 gap-10 items-center"
@@ -312,36 +315,16 @@
             </div>
 
             <div class="lg:col-span-2 space-y-4">
-              <!-- <div
-                class="bg-slate-800 rounded-2xl p-6 shadow-inner border border-slate-700"
-              >
-                <h3 class="text-lg font-semibold">Experience</h3>
-                <p class="text-slate-400 mt-2">
-                  Worked on a MERN stack project with authentication, course management, payment manage and deployment on Vercel/Render. Additionally, built multiple front-end projects using HTML, CSS, JavaScript, React, Bootstrap, and Tailwind, focusing on responsive design, clean UI, and user-friendly experiences.
-                </p>
-              </div> -->
+              <div class="flex justify-center items-center">
+                <div>
+                  <img
+                    src="image/salmanpr.jpeg"
+                    s
+                    alt="salman"
+                    class="rounded-full object-cover shadow-lg border-4 border-indigo-500 
+                sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 img"
 
-              <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div
-                  class="bg-slate-800 p-4 rounded-lg border border-slate-700"
-                >
-                  <h4 class="font-semibold">Education</h4>
-                  <p class="text-slate-400 mt-2">
-                    BCA — Munger University (2024)
-                  </p>
-                </div>
-                <div
-                  class="bg-slate-800 p-4 rounded-lg border border-slate-700"
-                >
-                  <h4 class="font-semibold">Tools</h4>
-                  <p class="text-slate-400 mt-2">
-                    VSCode • Git & GitHub • Postman
-                  </p>
-                </div>
-              </div> -->
-              <div  >
-                <div >
-                  <img src="image/CourseAcademy1.png" alt="salman" class="rounded-full" >
+                  />
                 </div>
               </div>
             </div>
@@ -349,6 +332,45 @@
         </div>
       </section>
 
+      <!-- ************** Experience *********** -->
+
+      <section id="experience" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Left Box -->
+            <div
+              class="bg-slate-800 rounded-2xl p-6 shadow-inner border border-slate-700"
+            >
+              <h3 class="text-lg font-semibold text-white">Experience</h3>
+              <p class="text-slate-400 mt-2 leading-relaxed">
+                Worked on a MERN stack project with authentication, course
+                management, payment integration, and deployment on
+                Vercel/Render. Additionally, built multiple front-end projects
+                using HTML, CSS, JavaScript, React, Bootstrap, and Tailwind CSS
+                — focusing on responsive design, clean UI, and user-friendly
+                experiences.
+              </p>
+            </div>
+
+            <!-- Right Box -->
+            <div class="space-y-4">
+              <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                <h4 class="font-semibold text-white">Education</h4>
+                <p class="text-slate-400 mt-2">
+                  BCA — Munger University (2024)
+                </p>
+              </div>
+
+              <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                <h4 class="font-semibold text-white">Tools</h4>
+                <p class="text-slate-400 mt-2">
+                  VSCode • Git & GitHub • Postman
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- PROJECTS -->
       <section id="projects" class="py-16 bg-slate-900/50">
@@ -403,7 +425,8 @@
               <div class="p-4">
                 <h3 class="font-semibold text-lg">Food Delivery App</h3>
                 <p class="text-slate-400 mt-2 text-sm">
-                 A responsive food delivery web app built with React and CSS, allowing users to browse, select, and order meals online.
+                  A responsive food delivery web app built with React and CSS,
+                  allowing users to browse, select, and order meals online.
                 </p>
                 <div class="mt-4 flex gap-2">
                   <a
@@ -434,7 +457,9 @@
               <div class="p-4">
                 <h3 class="font-semibold text-lg">Eduport-template</h3>
                 <p class="text-slate-400 mt-2 text-sm">
-                  Responsive EduPort clone web app using HTML, CSS, JavaScript, Bootstrap; features course listings, search, navigation, modals, and interactive UI.
+                  Responsive EduPort clone web app using HTML, CSS, JavaScript,
+                  Bootstrap; features course listings, search, navigation,
+                  modals, and interactive UI.
                 </p>
                 <div class="mt-4 flex gap-2">
                   <a
@@ -464,7 +489,9 @@
               <div class="p-4">
                 <h3 class="font-semibold text-lg">Real Estate WebApp</h3>
                 <p class="text-slate-400 mt-2 text-sm">
-                  Responsive real estate website frontend built with React and TailwindCSS, featuring property listings, navigation, and modern user interface design.
+                  Responsive real estate website frontend built with React and
+                  TailwindCSS, featuring property listings, navigation, and
+                  modern user interface design.
                 </p>
                 <div class="mt-4 flex gap-2">
                   <a
@@ -485,34 +512,36 @@
 
             <!-- 5th -->
             <article
-            class="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl overflow-hidden shadow-lg border border-slate-700"
-          >
-            <img
-              class="w-full h-44 object-cover"
-              src="/image/weatherapp.png"
-              alt="Video Library"
-            />
-            <div class="p-4">
-              <h3 class="font-semibold text-lg">Weather App</h3>
-              <p class="text-slate-400 mt-2 text-sm">
-                Responsive weather application built with ReactJS and CSS, integrating Weather API to display real-time weather updates for cities.
-              </p>
-              <div class="mt-4 flex gap-2">
-                <a
-                  href="https://ms-react-weather-app.netlify.app/"
-                  target="_blank"
-                  class="px-3 py-2 text-sm bg-primary text-slate-900 rounded-md"
-                  >Live</a
-                >
-                <a
-                  href="https://github.com/MDSALMAN-7/React-Weathter-App"
-                  target="_blank"
-                  class="px-3 py-2 text-sm border border-slate-700 rounded-md"
-                  >Code</a
-                >
+              class="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl overflow-hidden shadow-lg border border-slate-700"
+            >
+              <img
+                class="w-full h-44 object-cover"
+                src="/image/weatherapp.png"
+                alt="Video Library"
+              />
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Weather App</h3>
+                <p class="text-slate-400 mt-2 text-sm">
+                  Responsive weather application built with ReactJS and CSS,
+                  integrating Weather API to display real-time weather updates
+                  for cities.
+                </p>
+                <div class="mt-4 flex gap-2">
+                  <a
+                    href="https://ms-react-weather-app.netlify.app/"
+                    target="_blank"
+                    class="px-3 py-2 text-sm bg-primary text-slate-900 rounded-md"
+                    >Live</a
+                  >
+                  <a
+                    href="https://github.com/MDSALMAN-7/React-Weathter-App"
+                    target="_blank"
+                    class="px-3 py-2 text-sm border border-slate-700 rounded-md"
+                    >Code</a
+                  >
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
           </div>
         </div>
       </section>
