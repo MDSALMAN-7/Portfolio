@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+
+  <div class="max-w-6xl w-full px-8">
+    <!-- <h2 class="text-2xl font-bold mb-8 text-center">Grid Layout Example</h2> -->
+
+    <!-- Grid container -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      
+      <!-- Left Box -->
+      <div class="bg-slate-800 rounded-2xl p-6 shadow-inner border border-slate-700">
+              <h3 class="text-lg font-semibold">Experience</h3>
+              <p class="text-slate-400 mt-2">
+                Worked on a MERN stack project with authentication, course
+                management, payment management, and deployment on Vercel/Render.
+                Additionally, built multiple front-end projects using HTML, CSS,
+                JavaScript, React, Bootstrap, and Tailwind, focusing on
+                responsive design, clean UI, and user-friendly experiences.
+              </p>
+            </div>
+
+      <!-- Right Box -->
+      <div class="space-y-4">
+         <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                <h4 class="font-semibold">Education</h4>
+                <p class="text-slate-400 mt-2">
+                  BCA — Munger University (2024)
+                </p>
+              </div>
+
+        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                <h4 class="font-semibold">Tools</h4>
+                <p class="text-slate-400 mt-2">
+                  VSCode • Git & GitHub • Postman
+                </p>
+              </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
